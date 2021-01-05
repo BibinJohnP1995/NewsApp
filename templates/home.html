@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+    <body>
+    {% if user.is_authenticated %}
+        <center>
+            <p style="font-family:georgia,garamond,serif;font-size:20px;color: darkorange;font-weight: bold">hai {{ user.username }}...!</p>
+        </center>
+    {% else %}
+        <p style="font-family:georgia,garamond,serif;font-size:20px;font-weight: bold">You are not logged in</p>
+    {% endif %}
+        <font>
+            <center>
+                <p style="font-family:Times New Roman;font-size: 32px;color: black;font-weight: bold">WELCOME</p>
+            </center>
+        </font>
+    <center>
+    <div class="jumbotron">
+        <font color="blue" style="font-family:'Blackoak Std';font-weight: bold">
+        <h1 class="display-">focus-D</h1>
+        </font>
+        <font color="black" style="font-family:Times New Roman;font-weight: bold">
+        <p class="lead">THE POWER TO UNDERSTAND THE WORLD</p>
+        </font>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">View All Articles</a>
+        </p>
+    </center>
+     <h1>
+        <font color="blue">
+            <p style = "font-family:Times New Roman;font-size:24px;text-align: end;font-weight: bold" >#The_best_is_yet_to_come..!!!</p>
+        </font>
+         <font color="black">
+            <p style = "font-family:Times New Roman;font-size:20px;text-align: end;font-weight: bold">www.focus-D.com
+              <p style = "font-family:Times New Roman;font-size:20px;text-align: end;font-weight: bold">focus-D@gmail.com</p>
+        </font>
+    </h1>
+    </div>
+    </body>
+{% endblock content %}
+
